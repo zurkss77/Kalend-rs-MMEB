@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="poga">
+        <button class="goto-btn" href="paplasinatais_saraksts.pdf" >Varda diean</button>
+    </div>
+    <div id="debug"></div>
+
+    <script>
+        fetch("varda1.json")
+
+            .then(response => response.json())
+            .then(data => {
+                console.log(data.janv)
+                console.log(data.febr)
+                console.log(data.marts)
+                console.log(data.apr)
+                console.log(data.maijs)
+                console.log(data.jun)
+                console.log(data.jul)
+                console.log(data.aug)
+                console.log(data.sept)
+                console.log(data.okt)
+                console.log(data.nov)
+                console.log(data.dec)
+            })
+    </script>
+
+</body>
+
+</html>

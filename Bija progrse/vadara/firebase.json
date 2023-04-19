@@ -1,0 +1,11 @@
+{
+    "hosting": {
+        "site": "https://calendarplus-36db1-default-rtdb.firebaseio.com/",
+        "public": "public", // the only required attribute for Hosting
+        "ignore": [
+            "firebase.json",
+            "**/.*",
+            "**/node_modules/**"
+        ]
+    }
+}

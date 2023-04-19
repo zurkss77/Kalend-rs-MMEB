@@ -1,0 +1,71 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 80px;
+    background-color: #aca0a0ba;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Navigation bar styles */
+.navbar {
+    background-color: #fff;
+    border: none;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 20px;
+    border-radius: 0;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-nav li a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Form styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+.btn-success {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 0;
+    font-weight: bold;
+}
+
+    .btn-success:hover {
+        background-color: #3E8E41;
+    }
+
+/* Image styles */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+    margin-top: 20px;
+    padding: 20px 0;
+    border-top: 2px solid #ddd;
+}
