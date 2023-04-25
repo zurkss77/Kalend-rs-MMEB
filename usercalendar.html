@@ -1,0 +1,468 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Stay organized with our user-friendly Calendar featuring events, reminders, and a customizable interface. Built with HTML, CSS, and JavaScript. Start scheduling today!" />
+  <meta name="keywords" content="calendar, events, reminders, javascript, html, css, open source coding" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/usercalendar.css" />
+  <link rel="stylesheet" href="css/togglemodecolor.css" />
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <title>Calendar+</title>
+</head>
+
+<body>
+      <style>
+        td {
+          color: #000000;
+          font-family: Arial, Tahoms, Sans-Serif;
+        }
+
+        h1 {
+          color: #000000;
+          font-family: Arial, Tahoms, Sans-Serif;
+          font-size: 48px;
+          font-style: italic;
+          margin: 0px;
+        }
+
+        h2 {
+          color: #000000;
+          font-family: Arial, Tahoms, Sans-Serif;
+          font-size: 16px;
+          font-style: italic;
+          margin: 0px;
+        }
+
+        .mon {
+          color: #000000;
+          font-family: Arial, Tahoms, Sans-Serif;
+          font-size: 48px;
+        }
+
+        .dow {
+          font-weight: bold;
+          color: #FFFFFF;
+          width: 100px;
+        }
+
+        .dowred {
+          font-weight: bold;
+          color: #FF0000;
+          width: 100px;
+        }
+
+        .wday {
+          font-weight: bold;
+          color: #000000;
+          font-family: Arial, Tahoms, Sans-Serif;
+          font-size: 32px;
+        }
+
+        .wdayred {
+          font-weight: bold;
+          color: #FF0000;
+          font-size: 32px;
+        }
+
+        .months {
+          color: #666666;
+          font-family: Arial, Tahoms, Sans-Serif;
+          font-size: 14px;
+        }
+
+        .monthslang {
+          color: #666666;
+          font-family: Arial, Tahoms, Sans-Serif;
+          font-size: 16px;
+        }
+
+        .names {
+          font-weight: normal;
+          color: #000000;
+          font-family: Arial, Tahoms, Sans-Serif;
+          font-size: 12px;
+          text-align: left;
+          min-height: 50px;
+        }
+
+        .more_names {
+          font-weight: normal;
+          color: #000000;
+          font-family: Arial, Tahoms, Sans-Serif;
+          font-size: 10px;
+          text-align: left;
+          min-height: 50px;
+        }
+
+        .ill {
+          border: solid 0px #000000;
+          margin-left: 0px;
+          margin-right: 0px;
+        }
+
+        #rc {
+          position: fixed;
+          top: 0px;
+          left: 1050px;
+          display: block;
+          background-color: transparent;
+          background-attachment: scroll;
+          background-position: 0% 0%;
+          height: 600px;
+          width: 160px;
+          border: 0px;
+        }
+
+        .cp {
+          color: #CE3BBF;
+        }
+
+        .cp:hover {
+          background-color: #ffffff;
+        }
+
+        body {
+          background-image: url('/bgs/london03.jpg');
+          background-position: center 40px;
+          ;
+          background-repeat: no-repeat;
+        }
+      </style>
+      <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-5627169153230767",
+          enable_page_level_ads: true
+        });
+      </script>
+      </head>
+
+      <body>
+
+
+        <!-- Main wrapper -->
+        <div class="wrapper">
+
+          <!-- Content -->
+          <div class="content">
+            <br />
+            <div style="float: left; height: 40px; width: 400px;  border: solid 0px;">
+              <h1>April&nbsp;2023</h1>
+            </div>
+            <div style="float: left; height: 40px; width: 320px;  border: solid 0px; text-align: right;">
+            </div>
+
+
+            <!-- Calendar -->
+            <div class="widget">
+              <div class="head" style="border-bottom: 0px;">
+                <div style="float: left; width: 33%; text-align: left; margin-top: 7px; margin-left: 5px;"><a
+                    href="marts.html">
+                    <h4 class="fc-left">March&nbsp;2023</h4>
+                  </a></div>
+                <div style="float: left; width: 33%; text-align: right; margin-top: 7px;"><a href="maijs.html">
+                    <h4 class="fc-right" style="padding-right: 5px; background-position-x: right;">
+                      May&nbsp;2023&nbsp;&nbsp;</h4>
+                  </a></div>
+              </div>
+              <div id="calendar">
+
+
+                <table bgcolor="#000000" align="center" border="0" cellspacing="1" cellpadding="3" style="width: 100%;">
+                  <tr>
+
+                    <td align="center" style="background-color: #243623; padding: 5px;" class="dow">Monday</td>
+
+                    <td align="center" style="background-color: #243623; padding: 5px;" class="dow">Tuesday</td>
+
+                    <td align="center" style="background-color: #243623; padding: 5px;" class="dow">Wednesday</td>
+
+                    <td align="center" style="background-color: #243623; padding: 5px;" class="dow">Thursday</td>
+
+                    <td align="center" style="background-color: #243623; padding: 5px;" class="dow">Friday</td>
+
+                    <td align="center" style="background-color: #243623; padding: 5px;" class="dowred">Saturday</td>
+
+                    <td align="center" style="background-color: #243623; padding: 5px;" class="dowred">Sunday</td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wday">
+                      <div class="names"></div>
+
+                    </td>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wday">
+                      <div class="names"></div>
+
+                    </td>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wday">
+                      <div class="names"></div>
+
+                    </td>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wday">
+                      <div class="names"></div>
+
+                    </td>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wday">
+                      <div class="names"></div>
+
+                    </td>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wdayred">1
+                      <div class="names">Dagne Dagnis</div>
+
+                    </td>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wdayred">2
+                      <div class="names">Imgarde Irmgarde</div>
+
+                    </td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wday">3
+                      <div class="names">Daira Dairis Daiva</div>
+
+                    </td>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wday">4
+                      <div class="names">Ārvalda Ārvalds Herta Valda</div>
+
+                    </td>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wday">5
+                      <div class="names">Aivija Vidaga Vija</div>
+
+                    </td>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wday">6
+                      <div class="names">Dzinta Filips Vīlips Zinta</div>
+
+                    </td>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wday">7
+                      <div class="names">Helmuts Zina Zinaīda</div>
+
+                    </td>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wdayred">8
+                      <div class="names">Dana Dans Danute Edgars</div>
+
+                    </td>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wdayred">9
+                      <div class="names">Valērija Žubīte</div>
+
+                    </td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wday">10
+                      <div class="names">Anita Anitra Zīle</div>
+
+                    </td>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wday">11
+                      <div class="names">Hermanis Vilmārs</div>
+
+                    </td>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wday">12
+                      <div class="names">Ainis Jūlijs</div>
+
+                    </td>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wday">13
+                      <div class="names">Egils Egīls Nauris</div>
+
+                    </td>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wday">14
+                      <div class="names">Gudrīte Strauja</div>
+
+                    </td>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wdayred">15
+                      <div class="names">Aelita Gastons</div>
+
+                    </td>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wdayred">16
+                      <div class="names">Alfs Bernadeta Mintauts</div>
+
+                    </td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wday">17
+                      <div class="names">Rūdis Rūdolfs Viviāna</div>
+
+                    </td>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wday">18
+                      <div class="names">Jadviga Laura</div>
+
+                    </td>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wday">19
+                      <div class="names">Fanija Vēsma</div>
+
+                    </td>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wday">20
+                      <div class="names">Mirta Ziedīte</div>
+
+                    </td>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wday">21
+                      <div class="names">Anastasija Marģers</div>
+
+                    </td>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wdayred">22
+                      <div class="names">Armanda Armands</div>
+
+                    </td>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wdayred">23
+                      <div class="names">Georgs Jurģis Juris</div>
+
+                    </td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wday">24
+                      <div class="names">Nameda Ritvaldis Visvaldis</div>
+
+                    </td>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; border: solid 3px #ff0000;"
+                      align="right" valign="top" class="wday">25
+                      <div class="names">Bārbala Līksma</div>
+
+                    </td>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wday">26
+                      <div class="names">Alīna Rūsiņš Sandris</div>
+
+                    </td>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wday">27
+                      <div class="names">Klementīne Raimonda Raina Tāle</div>
+
+                    </td>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wday">28
+                      <div class="names">Gundega Terēze</div>
+
+                    </td>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wdayred">29
+                      <div class="names">Laine Raimonds Vilnis</div>
+
+                    </td>
+
+                    <td
+                      style="width: 14%; background-color: #FFFFFF; border-bottom: solid 1px #dddddd; border-left: solid 1px #dddddd; padding: 5px; "
+                      align="right" valign="top" class="wdayred">30
+                      <div class="names">Alta Liāna Lilija</div>
+
+                    </td>
+
+                  </tr>
+
+                </table>
+
+          <script src="js/usercalendar.js"></script>
+          <script src="js/togglemodeforcolor.js"></script>
+      </body>
+
+</html>
