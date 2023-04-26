@@ -1,0 +1,459 @@
+﻿* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    transition: 0.2s ease-in-out;
+    color: #000;
+    text-decoration: none;
+    background-color: #FDDCD5;
+}
+
+::selection {
+    background-color: var(--Soft-Red);
+    color: #fff;
+}
+
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--Soft-Pink);
+}
+
+section {
+    padding: 2rem 30%;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.heading {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--Very-Dark-Blue);
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+}
+
+
+    .heading h1 {
+        padding-bottom: 2rem;
+    }
+
+
+    .heading p {
+        max-width: 60rem;
+        margin: auto;
+        color: var(--Grayish-Blue);
+        font-size: 1.7rem;
+    }
+
+
+.all-btn {
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    background-color: var(--Soft-Pink);
+    border-radius: .5rem;
+    color: #fff;
+}
+
+    .all-btn:hover {
+        background-color: transparent;
+        color: var(--Soft-Pink);
+        border: 2px solid var(--Soft-Pink);
+    }
+
+
+:root {
+    --Soft-Pink: hsl(0deg 100% 76.42%);
+    --Soft-Red: hsl(0, 94%, 66%);
+    --Grayish-Blue: hsl(229, 8%, 60%);
+    --Very-Dark-Blue: hsl(229, 31%, 21%);
+    --box-shadow: .5rem .5rem 0 hsl(231, 69%, 60%);
+    --text-shadow: .4rem .4rem 0 rgba(0, 0, 0, .2);
+    --border: .2rem solid var(--green);
+}
+
+
+/* navbar sections starts */
+.header {
+    padding: 1rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0%;
+    left: 0;
+    z-index: 10000;
+    background-color: #FFB5BF;
+    box-shadow: 0rem 0.5rem 1.5rem rgba(0, 0, 0, .1);
+}
+
+
+    .header .logo {
+        cursor: pointer;
+    }
+
+
+    .header .navbar a {
+        margin-left: 2rem;
+        font-size: 1.7rem;
+        text-transform: uppercase;
+    }
+
+
+        .header .navbar a:hover {
+            color: var(--Soft-Red);
+        }
+
+
+    .header .navbar .btn {
+        padding: .6rem 3rem;
+        background-color: var(--Soft-Red);
+        color: #fff;
+        border-radius: .5rem;
+    }
+
+        .header .navbar .btn:hover {
+            color: var(--Soft-Red);
+            background-color: transparent;
+            border: 2px solid var(--Soft-Red);
+        }
+
+#menu-btn {
+    padding: 1rem 1rem;
+    background-color: #eee;
+    font-size: 3rem;
+    color: var(--Soft-Pink);
+    border-radius: .3rem;
+    cursor: pointer;
+    display: none;
+}
+/* navbar sections ends */
+
+/* home section starts  */
+
+.home {
+    padding-top: 20rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /* main property for responsiveness */
+    gap: 1.5rem;
+}
+
+
+    .home .image {
+        flex: 1 1 45rem;
+    }
+
+
+        .home .image img {
+            width: 100%;
+            margin-top: 5rem;
+        }
+
+
+    .home .content {
+        flex: 1 1 45rem;
+    }
+
+
+        .home .content h1 {
+            font-size: 4.5rem;
+            padding-block-end: 1rem 0;
+            color: var(--Very-Dark-Blue);
+        }
+
+        .home .content p {
+            font-size: 1.7rem;
+            padding: 1rem 0;
+            max-width: 40rem;
+            color: var(--Grayish-Blue);
+            padding-bottom: 4rem;
+        }
+
+        .home .content .home-btn {
+            padding: 1.3rem 2rem;
+            background-color: #fcc7fa;
+            color: #000;
+            font-size: 1.7rem;
+            box-shadow: .5rem .5rem #c738aa;
+            border: 2px #fff;
+            border-radius: .5rem;
+        }
+
+
+            .home .content .home-btn:hover {
+                background-color: #c13ccb;
+                box-shadow: none;
+                color: #fff;
+            }
+
+
+
+
+/* home section ends */
+
+/* palīdzības sekcijas sākums */
+.palīdzība .palīdzība {
+    padding: 10rem;
+    padding-top: 10rem;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+}
+/* palīdzības sekcijas beigas*/
+
+/* parmums sekcijas sākums */
+.parmums .parmums {
+    padding: 10rem;
+    padding-top: 10rem;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #000;
+}
+/* parmums sekcijas beigas*/
+
+/* saziņas sekcijas sākums */
+.saziņa .saziņa {
+    padding: 10rem;
+    padding-top: 5rem;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #000;
+}
+/* saziņas sekcijas beigas*/
+
+/* nobeikuma sekcijas sākums */
+.nobeigums .autortiesības {
+    padding: 2rem;
+    padding-top: 5rem;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 2.3rem;
+    color: #000;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+}
+/* nobeiguma sekcijas beigas*/
+
+html {
+    margin: 0;
+  }
+  body {
+    margin: 0;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    height: 100vh;
+  }
+  
+  .bg {
+    position: absolute;
+  }
+  
+  .wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    width: 800px;
+  }
+  
+  .box {
+    position: relative;
+    width: 539px;
+    height: 383.5px;
+    border: 1px solid rgb(212, 196, 196);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    margin-top: 50px;
+    background-color: white;
+    margin: 30px;
+  }
+  .burger {
+    position: relative;
+    padding-bottom: 15px;
+  }
+  .ham1,
+  .ham2,
+  .ham3 {
+    width: 30px;
+    height: 3px;
+    background-color: #cd5454;
+    margin: 3px 0;
+  }
+  
+  .text {
+    grid-column: span 1;
+    grid-row: span 3;
+    justify-content: center;
+    margin-top: 40px;
+    margin-left: 60px;
+  }
+  .text h1 {
+    font-size: 42px;
+    line-height: 0.5;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  .text p {
+    line-height: 1.2;
+    padding-bottom: 1rem;
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  
+  .button {
+    padding: 8px 24px;
+    border: none;
+    border-radius: 2px;
+    background: #cd5454;
+    font-size: 12px;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 700;
+  }
+  
+  .colors {
+    margin-left: 8px;
+    width: 380px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .line {
+    height: 6px;
+    width: 420px;
+    background-image: linear-gradient(
+      to right,
+      #cd5454 0%,
+      #cd5454 33%,
+      #f1b9b9 33%,
+      #f1b9b9 66%,
+      #fadfdf 66%,
+      #fadfdf 100%
+    );
+    margin: -12px 12px;
+  }
+  
+  .rectangle {
+    border-radius: 10px;
+    height: 50px;
+    width: 100px;
+    background-color: #555;
+    margin: 10px;
+    box-shadow: 3px 3px 5px grey;
+  }
+  
+  .red {
+    background-color: #cd5454;
+  }
+  .orange {
+    background-color: #f68e65;
+  }
+  .blue {
+    background-color: #494ca2;
+  }
+  .yellow {
+    background-color: #ffed61;
+  }
+  .green {
+    background-color: #488b8f;
+  }
+  .purple {
+    background-color: #714288;
+  }
+  .pink {
+    background-color: #f67280;
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .wrapper {
+      width: 375px;
+    }
+    .box {
+      width: 374px;
+      height: 199.8px;
+    }
+    .bg {
+      width: 345px;
+      height: 200px;
+    }
+    .colors {
+      width: 375px;
+      align-items: center;
+      justify-content: center;
+      margin-right: 16px;
+    }
+    .line {
+      max-width: 308px;
+      margin-bottom: 10px;
+      height: 4px;
+    }
+    .yes {
+      display: none;
+    }
+    .yellow {
+      display: none;
+    }
+    .burger {
+      position: relative;
+      padding-bottom: 5px;
+    }
+    .text {
+      grid-column: span 1;
+      grid-row: span 1;
+      justify-content: center;
+      margin-top: 20px;
+      margin-left: 30px;
+    }
+    .text h1 {
+      font-size: 28px;
+      line-height: 0.5;
+    }
+    .text p {
+      font-size: 10px;
+      padding-bottom: 5px;
+    }
+    .ham1,
+    .ham2,
+    .ham3 {
+      width: 24px;
+      height: 2.5px;
+      background-color: #cd5454;
+      margin: 2.5px 0;
+    }
+    .button {
+      padding: 4px 12px;
+      border: none;
+      border-radius: 2px;
+      background: #cd5454;
+      font-size: 9px;
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .rectangle {
+      border-radius: 6px;
+      height: 36px;
+      width: 86px;
+      margin: 6px;
+      box-shadow: 3px 3px 5px grey;
+    }
+  }
+  
